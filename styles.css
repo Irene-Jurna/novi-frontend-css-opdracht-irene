@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@500&display=swap');
 
 /*////////////////////////
     Table of Contents
@@ -58,6 +58,10 @@ button {
     text-transform: uppercase;
 }
 
+a {
+    color: var(--purple-color);
+}
+
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
@@ -69,7 +73,7 @@ header {
 }
 
 .nav-container {
-display: flex;
+    display: flex;
     flex-direction: row;
     list-style-type: none;
     justify-content: space-around;
@@ -94,5 +98,27 @@ display: flex;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightgrey-background-color);
+    color: var(--purple-color);
+    padding: 80px 0 65px 0;
+}
+
+.intro-item {
+    font-size: 19px;
+    text-align: center;
+    margin: 10px 8px;
+}
+
+.intro-contact-item {
+    color: var(--black-standard-text-color);
+    font-size: 16px;
+    padding-top: 20px;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
