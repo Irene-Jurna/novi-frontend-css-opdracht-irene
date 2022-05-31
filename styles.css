@@ -18,6 +18,12 @@
 
 /* Toepassing kleur in comments erbij zetten (zodat je het niet 138 keer hoeft aan te passen */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --purple-color: #5722CD;
     --blue-color: #4845E4;
@@ -39,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
-    margin: 0;
+    /*margin: 0;*/
 }
 
 
@@ -77,8 +83,8 @@ header {
     flex-direction: row;
     list-style-type: none;
     justify-content: space-around;
-    margin: 0;
-    padding: 0;
+    /*margin: 0;*/
+    /*padding: 0;*/
 }
 
 .nav-item {
@@ -104,7 +110,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--lightgrey-background-color);
+    background-color: white;
     color: var(--purple-color);
     padding: 80px 0 65px 0;
 }
@@ -133,12 +139,30 @@ header {
 img {
     padding: 20px;
     width: auto;
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
 }
 
-.work-text-item {
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.work-text-item-container {
     padding: 10px;
+    margin: 10px;
+}
+
+.work-decorative-item {
+    padding: 15px 0 15px 0;
+    margin: 0px;
+}
+
+.work-link-item {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
