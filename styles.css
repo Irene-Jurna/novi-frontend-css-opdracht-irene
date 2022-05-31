@@ -121,4 +121,24 @@ header {
     padding-top: 20px;
 }
 
+/* --------------- 4.3 Work ------------------- */
+
+.work-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightgrey-background-color);
+    color: var(--black-standard-text-color);
+}
+
+img {
+    padding: 20px;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+}
+
+.work-text-item {
+    padding: 10px;
+}
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
