@@ -45,7 +45,6 @@ h1, h2, h3, h4, h5, h6 {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
-    /*margin: 0;*/
 }
 
 
@@ -83,8 +82,6 @@ header {
     flex-direction: row;
     list-style-type: none;
     justify-content: space-around;
-    /*margin: 0;*/
-    /*padding: 0;*/
 }
 
 .nav-item {
@@ -137,7 +134,7 @@ header {
 }
 
 img {
-    padding: 20px;
+    padding: 15px;
     width: auto;
     max-width: 100%;
     height: auto;
@@ -150,19 +147,37 @@ img {
 }
 
 .work-text-item-container {
-    padding: 10px;
-    margin: 10px;
+    padding: 15px;
+    /*margin: 10px;*/
 }
 
 .work-decorative-item {
-    padding: 15px 0 15px 0;
+    padding: 30px 0 30px 0;
     margin: 0px;
+}
+
+.work-text-item {
+    padding: 0px 0 35px 0;
+    font-size: 15px;
 }
 
 .work-link-item {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 11.5px;
+    padding: 30px 0;
+    letter-spacing: 2px;
+}
+
+/* ------------------------------- 4.5 Form -------------------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(180deg, var(--blue-color), var(--purple-color));
+    color: white;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
