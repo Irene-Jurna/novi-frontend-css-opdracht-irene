@@ -48,6 +48,12 @@ h2 {
     letter-spacing: -1px;
 }
 
+h3 {
+    color: var(--purple-color);
+    font-weight: 700;
+    font-size: 20px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
@@ -184,6 +190,32 @@ img {
     letter-spacing: 2px;
 }
 
+/* ------------------------------- 4.4 Services -------------------------------- */
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.services-item {
+    border: 1px solid var(--purple-color);
+    margin: 20px;
+    padding: 33px;
+    color: var(--grey-service-tiles-color);
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+#p-services-item {
+    font-size: 14px;
+}
+
+#service-image-item {
+    max-width: 70px;
+    max-height: 70px;
+    padding: 0 0 5px 0;
+}
+
 /* ------------------------------- 4.5 Form -------------------------------- */
 .form-container {
     display: flex;
@@ -214,10 +246,6 @@ input, textarea {
     font-size: 14px;
     text-align: left;
     padding: 10px 0 0 16px;
-}
-
-#form-button {
-    display: block;
 }
 
 /* ------------------------------- 4.6 Footer -------------------------------- */
