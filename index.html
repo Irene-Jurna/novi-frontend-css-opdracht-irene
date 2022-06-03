@@ -19,8 +19,8 @@
     <article class="header-container">
         <h1>Your website is an investment in the success of your business.
         </h1>
-        <h3>We are here to help you succeed.
-        </h3>
+        <p class="p-subline-item" id="header-subline-item">We are here to help you succeed.
+        </p>
         <button>Let's work together</button>
     </article>
 </header>
@@ -44,7 +44,8 @@
         <span class="image-wrapper">
                 <img class="work-decorative-item" src="./assets/squiggle_line.svg"
                      alt="Decorative squiggle line"></span>
-        <p class="work-text-item">You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a global icon.</p>
+        <p class="work-text-item">You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s
+            a global icon.</p>
         <a class="work-link-item">View project</a>
     </div>
 </article>
@@ -58,7 +59,8 @@
         <span class="image-wrapper">
                 <img class="work-decorative-item" src="./assets/squiggle_line.svg"
                      alt="Decorative squiggle line"></span>
-        <p class="work-text-item">Variety is an industry leader for breaking entertainment news, reviews and box office results with archive of content dating back to 1905.</p>
+        <p class="work-text-item">Variety is an industry leader for breaking entertainment news, reviews and box office
+            results with archive of content dating back to 1905.</p>
         <a class="work-link-item">View project</a>
     </div>
 </article>
@@ -77,20 +79,23 @@
     </div>
 </article>
 <!--Form-->
-<form onsubmit="hier-hebben-we-javascript-voor-nodig">
-<h2>Let's work together</h2>
-<p>Have a question? Need a quote? Let us know!</p>
-    <label for="user-name-field">Name
+<article class="form-container">
+    <h2 id="h2-form-item">Let's work together</h2>
+    <p class="p-subline-item">Have a question? Need a quote? Let us know!</p>
+    <form onsubmit="hier-hebben-we-javascript-voor-nodig" class="form-item-container">
+        <label for="user-name-field" class="form-label-item">Name</label>
         <input type="text" id="user-name-field" placeholder="Name"/>
-    </label>
-    <label for="user-email-field">Email
+        <label for="user-email-field" class="form-label-item">Email</label>
         <input type="email" id="user-email-field" placeholder="Email"/>
-    </label>
-    <label for="user-message-field">Message
-        <textarea type="text" id="user-message-field" placeholder="Message"></textarea>
-    </label>
-    <button type="submit">Send</button>
-</form>
-
+        <label for="user-message-field" class="form-label-item">Message</label>
+        <textarea type="text" id="user-message-field" placeholder="Message" rows="10"></textarea>
+        <div id="form-button">
+        <button type="submit">Send</button>
+        </div>
+    </form>
+</article>
+<footer>
+    <p>Business website opdracht © NOVI Hogeschool 2022</p>
+</footer>
 </body>
 </html>
