@@ -42,6 +42,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
 }
 
+h1 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
 h2 {
     font-weight: 700;
     font-size: 27px;
@@ -114,12 +119,22 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 180px 30px 280px 30px;
+    padding: 90px 0 90px 0;
     text-align: center;
 }
 
 #header-subline-item {
     font-size: 20px;
+}
+
+.header-image-item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding: 0;
+    width: 50%;
+    max-height: 100px;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
@@ -196,6 +211,7 @@ img {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .services-item {
@@ -203,7 +219,7 @@ img {
     margin: 20px;
     padding: 33px;
     color: var(--grey-service-tiles-color);
-    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 #p-services-item {
