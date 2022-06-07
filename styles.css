@@ -85,10 +85,12 @@ button {
     text-transform: uppercase;
     font-size: 12px;
     min-width: 180px;
+    cursor: pointer;
 }
 
 a {
     color: var(--purple-color);
+    cursor: pointer;
 }
 
 .inner-container {
@@ -96,6 +98,23 @@ a {
     text-align: center;
     max-width: 550px;
 }
+
+.triangle-shape {
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 750px solid transparent;
+    border-bottom: 30px solid white;
+}
+
+.triangle-shape-reversed {
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 750px solid transparent;
+    border-bottom: 30px solid var(--blue-color);
+}
+
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -189,7 +208,7 @@ header {
 }
 
 .work-container:nth-child(even) {
-    flex-direction:row
+    flex-direction: row
 }
 
 .image-wrapper img {
