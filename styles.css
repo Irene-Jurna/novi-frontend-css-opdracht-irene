@@ -99,21 +99,22 @@ a {
     max-width: 550px;
 }
 
-.triangle-shape {
-    width: 0;
-    height: 0;
-    border-left: 0px solid transparent;
-    border-right: 750px solid transparent;
-    border-bottom: 30px solid white;
-}
+/*.triangle-shape {*/
+/*    width: 0;*/
+/*    height: 0;*/
+/*    border-left: 0px solid transparent;*/
+/*    border-right: 750px solid transparent;*/
+/*    border-bottom: 30px solid white;*/
+/*    margin-top: -30px;*/
+/*}*/
 
-.triangle-shape-reversed {
-    width: 0;
-    height: 0;
-    border-left: 0px solid transparent;
-    border-right: 750px solid transparent;
-    border-bottom: 30px solid var(--blue-color);
-}
+/*.triangle-shape-reversed {*/
+/*    width: 0;*/
+/*    height: 0;*/
+/*    border-left: 0px solid transparent;*/
+/*    border-right: 375px solid transparent;*/
+/*    border-bottom: 30px solid var(--blue-color);*/
+/*}*/
 
 
 /* --------------- 3.2 Other --------------------------- */
@@ -180,6 +181,8 @@ header {
     background-color: white;
     color: var(--purple-color);
     padding: 80px 0 65px 0;
+    margin-top: 60px;
+    position: relative;
 }
 
 .intro-item {
@@ -194,7 +197,21 @@ header {
     padding-top: 50px;
 }
 
+.intro-container:after {
+    content: "hello";
+    font-size: 140px;
+    letter-spacing: -10px;
+    opacity: 0.1;
+    top: 3%;
+    position: absolute;
+}
+
 /* --------------- 4.3 Work ------------------- */
+
+.work-background {
+    background-color: var(--lightgrey-background-color);
+    padding-top: 120px;
+}
 
 .work-container {
     display: flex;
@@ -258,6 +275,10 @@ header {
     transition: width 0.3s ease-in-out;
 }
 
+.work-h2 {
+    padding: 10px 0;
+}
+
 /* ------------------------------- 4.4 Services -------------------------------- */
 
 .services-container {
@@ -265,8 +286,9 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 120px;
     margin-bottom: 30px;
+    /*position: relative;*/
 }
 
 .services-item {
@@ -287,6 +309,15 @@ header {
     max-width: 70px;
     max-height: 70px;
     padding: 0 0 5px 0;
+}
+
+.services-container:after {
+    content: "services";
+    font-size: 105px;
+    color: var(--purple-color);
+    letter-spacing: -8px;
+    opacity: 0.1;
+    position: absolute;
 }
 
 /* ------------------------------- 4.5 Form -------------------------------- */
