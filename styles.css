@@ -78,7 +78,7 @@ button {
     background-color: var(--pink-color);
     border: none;
     color: white;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
     padding: 20px 40px;
     margin-top: 20px;
     border-radius: 50px;
@@ -99,18 +99,44 @@ a {
     max-width: 550px;
 }
 
-.triangle-shape {
-    border-left: 0 solid transparent;
-    border-right: 100vw solid transparent;
-    border-bottom: 50px solid white;
-    margin-top: -30px;
+.triangle {
+    position: relative;
 }
 
-.triangle-shape-reversed {
-    border-left: 0 solid transparent;
-    border-right: 100vw solid transparent;
-    border-bottom: 30px solid var(--blue-color);
+.triangle:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100vw solid white;
+    border-bottom: 0 solid transparent;
+    position: absolute;
+    bottom: -1px;
 }
+
+.triangle--grey:before {
+    border-left-color: var(--lightgrey-background-color);
+}
+
+/*.triangle-shape {*/
+/*    border-left: 0px solid transparent;*/
+/*    border-right: 100vw solid transparent;*/
+/*    border-bottom: 5vw solid white;*/
+/*    margin-top: -3vw;*/
+/*    margin-bottom: -3px;*/
+/*}*/
+
+/*.triangle-shape-reversed {*/
+/*    border-left: 0px solid transparent;*/
+/*    border-right: 100vw solid transparent;*/
+/*    border-bottom: 5vw solid var(--blue-color);*/
+/*}*/
+
+/*.triangle-shape-services {*/
+/*    border-left: 0vw solid transparent;*/
+/*    border-right: 100vw solid transparent;*/
+/*    border-bottom: 8vw solid white;*/
+/*}*/
 
 
 /* --------------- 3.2 Other --------------------------- */
@@ -119,9 +145,8 @@ a {
 
 /* --------------- 4.1 Header ------------------------- */
 header {
-    background: linear-gradient(180deg, var(--blue-color), var(--purple-color));
+    background-image: url(assets/noise-texture.png), linear-gradient(180deg, var(--blue-color), var(--purple-color));
     color: white;
-    position: relative;
 }
 
 .nav-container {
@@ -179,6 +204,7 @@ header {
     color: var(--purple-color);
     padding: 80px 0 65px 0;
     margin-top: 60px;
+    margin-bottom: 50px;
     position: relative;
 }
 
@@ -198,9 +224,9 @@ header {
     content: "hello";
     font-size: 38vw;
     letter-spacing: -10px;
-    color: var(--pink-color);
-    opacity: 0.05;
-    top: 0;
+    color: var(--purple-color);
+    opacity: 0.08;
+    top: 3%;
     position: absolute;
 }
 
@@ -208,20 +234,9 @@ header {
 
 .work-background {
     background-color: var(--lightgrey-background-color);
-    padding-top: 120px;
-    position: relative;
+    padding-top: 150px;
+    padding-bottom: 20px;
 }
-
-/*.work-background:before {*/
-/*    content: "work";*/
-/*    font-size: 38vw;*/
-/*    letter-spacing: -10px;*/
-/*    color: white;*/
-/*    opacity: 0.9;*/
-/*    top: 0;*/
-/*    left: 10vw;*/
-/*    position: absolute;*/
-/*}*/
 
 .work-container {
     display: flex;
@@ -241,7 +256,7 @@ header {
 .image-wrapper img {
     max-width: 100%;
     height: auto;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
 }
 
 .image-wrapper {
@@ -251,8 +266,8 @@ header {
 }
 
 .work-decorative-item {
-    padding: 30px 0 30px 0;
-    margin: 0;
+    padding: 30px 0 50px 0;
+    margin: 0px;
 }
 
 .work-text-item {
@@ -263,7 +278,8 @@ header {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 11.5px;
-    padding: 30px 0;
+    padding-bottom: 10px;
+    padding-top: 50px;
     letter-spacing: 2px;
     cursor: pointer;
     display: flex;
@@ -286,7 +302,8 @@ header {
 }
 
 .work-h2 {
-    padding: 10px 0;
+    padding-top: 40px;
+    /*padding-bottom: 5px;*/
 }
 
 /* ------------------------------- 4.4 Services -------------------------------- */
@@ -296,8 +313,11 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 120px;
+    padding-top: 140px;
     margin-bottom: 30px;
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
     /*position: relative;*/
 }
 
@@ -309,6 +329,8 @@ header {
     padding: 25px;
     color: var(--grey-service-tiles-color);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    z-index: 10;
 }
 
 #p-services-item {
@@ -318,17 +340,18 @@ header {
 #service-image-item {
     max-width: 70px;
     max-height: 70px;
-    padding: 0 0 5px 0;
+    padding: 0 0 30px 0;
 }
 
-/*.services-container:after {*/
-/*    content: "services";*/
-/*    font-size: 105px;*/
-/*    color: var(--purple-color);*/
-/*    letter-spacing: -8px;*/
-/*    opacity: 0.1;*/
-/*    position: absolute;*/
-/*}*/
+.services-container:after {
+    content: "services";
+    font-size: 28vw;
+    color: var(--purple-color);
+    letter-spacing: -8px;
+    opacity: 0.1;
+    margin-top: -75px;
+    position: absolute;
+}
 
 /* ------------------------------- 4.5 Form -------------------------------- */
 .form-container {
@@ -343,7 +366,7 @@ header {
 }
 
 #h2-form-item {
-    letter-spacing: 0;
+    letter-spacing: 0px;
     padding-top: 100px;
 }
 
@@ -422,9 +445,19 @@ footer {
         content: "hello";
         font-size: 20vw;
         letter-spacing: -10px;
-        color: var(--pink-color);
-        opacity: 0.05;
+        color: var(--purple-color);
+        opacity: 0.08;
         top: -3vw;
+        position: absolute;
+    }
+
+    .services-container:after {
+        content: "services";
+        font-size: 13vw;
+        color: var(--purple-color);
+        letter-spacing: -8px;
+        opacity: 0.1;
+        margin-top: -185px;
         position: absolute;
     }
 }
