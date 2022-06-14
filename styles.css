@@ -107,7 +107,7 @@ a {
     content: "";
     width: 0;
     height: 0;
-    border-top: 50px solid transparent;
+    border-top: 5vw solid transparent;
     border-left: 100vw solid white;
     border-bottom: 0 solid transparent;
     position: absolute;
@@ -118,26 +118,20 @@ a {
     border-left-color: var(--lightgrey-background-color);
 }
 
-/*.triangle-shape {*/
-/*    border-left: 0px solid transparent;*/
-/*    border-right: 100vw solid transparent;*/
-/*    border-bottom: 5vw solid white;*/
-/*    margin-top: -3vw;*/
-/*    margin-bottom: -3px;*/
-/*}*/
+.triangle--reversed {
+    position: relative;
+}
 
-/*.triangle-shape-reversed {*/
-/*    border-left: 0px solid transparent;*/
-/*    border-right: 100vw solid transparent;*/
-/*    border-bottom: 5vw solid var(--blue-color);*/
-/*}*/
-
-/*.triangle-shape-services {*/
-/*    border-left: 0vw solid transparent;*/
-/*    border-right: 100vw solid transparent;*/
-/*    border-bottom: 8vw solid white;*/
-/*}*/
-
+.triangle--reversed:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 5vw solid transparent;
+    border-right: 100vw solid white;
+    border-top: 0 solid transparent;
+    position: absolute;
+    top: 0;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -202,9 +196,8 @@ header {
     align-items: center;
     background-color: white;
     color: var(--purple-color);
-    padding: 80px 0 65px 0;
+    padding: 80px 0 120px 0;
     margin-top: 60px;
-    margin-bottom: 50px;
     position: relative;
 }
 
@@ -313,7 +306,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 140px;
+    padding-top: 100px;
     margin-bottom: 30px;
     max-width: 990px;
     margin-left: auto;
