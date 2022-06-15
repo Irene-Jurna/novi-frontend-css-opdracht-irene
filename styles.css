@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto:wght@300;500&display=swap');
 
 /*////////////////////////
     Table of Contents
@@ -18,6 +18,12 @@
 
 /* Toepassing kleur in comments erbij zetten (zodat je het niet 138 keer hoeft aan te passen */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --purple-color: #5722CD;
     --blue-color: #4845E4;
@@ -36,10 +42,31 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
 }
 
+h1 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 27px;
+    letter-spacing: -1px;
+}
+
+h3 {
+    color: var(--purple-color);
+    font-weight: 700;
+    font-size: 20px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
-    margin: 0;
+}
+
+.p-subline-item {
+    font-weight: 300;
+    padding: 20px 0;
 }
 
 
@@ -56,6 +83,54 @@ button {
     margin-top: 20px;
     border-radius: 50px;
     text-transform: uppercase;
+    font-size: 12px;
+    min-width: 180px;
+    cursor: pointer;
+}
+
+a {
+    color: var(--purple-color);
+    cursor: pointer;
+}
+
+.inner-container {
+    /*border: 3px dotted mediumpurple;*/
+    text-align: center;
+    max-width: 550px;
+}
+
+.triangle {
+    position: relative;
+}
+
+.triangle:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 5vw solid transparent;
+    border-left: 100vw solid white;
+    border-bottom: 0 solid transparent;
+    position: absolute;
+    bottom: -1px;
+}
+
+.triangle--grey:before {
+    border-left-color: var(--lightgrey-background-color);
+}
+
+.triangle--reversed {
+    position: relative;
+}
+
+.triangle--reversed:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 5vw solid transparent;
+    border-right: 100vw solid white;
+    border-top: 0 solid transparent;
+    position: absolute;
+    top: 0;
 }
 
 /* --------------- 3.2 Other --------------------------- */
@@ -64,17 +139,15 @@ button {
 
 /* --------------- 4.1 Header ------------------------- */
 header {
-    background: linear-gradient(180deg, var(--blue-color), var(--purple-color));
+    background-image: url(assets/noise-texture.png), linear-gradient(180deg, var(--blue-color), var(--purple-color));
     color: white;
 }
 
 .nav-container {
-display: flex;
+    display: flex;
     flex-direction: row;
     list-style-type: none;
     justify-content: space-around;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-item {
@@ -82,6 +155,13 @@ display: flex;
     padding: 40px 20px;
     color: white;
     text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+.nav-item {
+    font-weight: 300;
 }
 
 .header-container {
@@ -89,10 +169,283 @@ display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 180px 30px 280px 30px;
+    padding: 90px 0 90px 0;
     text-align: center;
+}
+
+#header-subline-item {
+    font-size: 20px;
+}
+
+.header-image-item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding: 0;
+    width: 50%;
+    max-width: 50px;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
 
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: var(--purple-color);
+    padding: 80px 0 120px 0;
+    margin-top: 60px;
+    position: relative;
+}
+
+.intro-item {
+    font-size: 19px;
+    text-align: center;
+    margin: 10px 8px;
+}
+
+.intro-contact-item {
+    color: var(--black-standard-text-color);
+    font-size: 16px;
+    padding-top: 50px;
+}
+
+.intro-container:after {
+    content: "hello";
+    font-size: 38vw;
+    letter-spacing: -10px;
+    color: var(--purple-color);
+    opacity: 0.08;
+    top: 3%;
+    position: absolute;
+}
+
+/* --------------- 4.3 Work ------------------- */
+
+.work-background {
+    background-color: var(--lightgrey-background-color);
+    padding-top: 150px;
+    padding-bottom: 20px;
+}
+
+.work-container {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*align-items: center;*/
+    background-color: var(--lightgrey-background-color);
+    color: var(--black-standard-text-color);
+    padding: 15px;
+}
+
+.work-container:nth-child(even) {
+    flex-direction: row
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.work-decorative-item {
+    padding: 30px 0 50px 0;
+    margin: 0px;
+}
+
+.work-text-item {
+    font-size: 15px;
+}
+
+.work-link-item {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11.5px;
+    padding-bottom: 10px;
+    padding-top: 50px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.work-link-item:hover:after {
+    width: 70px;
+}
+
+.work-link-item:after {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: currentColor;
+    /*display: inline-block;*/
+    /*align-self: center;*/
+    margin-left: 5px;
+    transition: width 0.3s ease-in-out;
+}
+
+.work-h2 {
+    padding-top: 40px;
+    /*padding-bottom: 5px;*/
+}
+
+/* ------------------------------- 4.4 Services -------------------------------- */
+
+.services-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 100px;
+    margin-bottom: 30px;
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-item {
+    border: 1px solid var(--purple-color);
+    max-width: 300px;
+    max-height: 300px;
+    margin: 15px;
+    padding: 25px;
+    color: var(--grey-service-tiles-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    z-index: 10;
+}
+
+#p-services-item {
+    font-size: 13px;
+}
+
+#service-image-item {
+    max-width: 70px;
+    max-height: 70px;
+    padding: 0 0 30px 0;
+}
+
+.services-container:after {
+    content: "services";
+    font-size: 28vw;
+    color: var(--purple-color);
+    letter-spacing: -8px;
+    opacity: 0.1;
+    margin-top: -75px;
+    position: absolute;
+}
+
+/* ------------------------------- 4.5 Form -------------------------------- */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(180deg, var(--blue-color), var(--purple-color));
+    color: white;
+    padding-bottom: 60px;
+}
+
+#h2-form-item {
+    letter-spacing: 0px;
+    padding-top: 100px;
+}
+
+.form-item-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-container-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input, textarea {
+    padding: 17px;
+    margin: 0 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-label-item {
+    font-size: 14px;
+    text-align: left;
+    padding: 10px 0 0 16px;
+}
+
+/* ------------------------------- 4.6 Footer -------------------------------- */
+
+footer {
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 11px;
+    font-weight: 300;
+    padding: 20px;
+    justify-content: center;
+}
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (min-width: 576px) {
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        justify-content: flex-end;
+    }
+
+    .intro-item {
+        font-size: 21px;
+    }
+
+    .work-text-item-container {
+        max-width: 30%;
+        margin: 60px;
+    }
+
+    .image-wrapper {
+        max-width: 45%;
+        padding: 30px;
+    }
+
+    .work-container {
+        align-items: center;
+    }
+
+    .work-text-item-container {
+        padding: 15px;
+    }
+
+    .intro-container:after {
+        content: "hello";
+        font-size: 20vw;
+        letter-spacing: -10px;
+        color: var(--purple-color);
+        opacity: 0.08;
+        top: -3vw;
+        position: absolute;
+    }
+
+    .services-container:after {
+        content: "services";
+        font-size: 13vw;
+        color: var(--purple-color);
+        letter-spacing: -8px;
+        opacity: 0.1;
+        margin-top: -185px;
+        position: absolute;
+    }
+}
