@@ -311,7 +311,6 @@ header {
     max-width: 990px;
     margin-left: auto;
     margin-right: auto;
-    /*position: relative;*/
 }
 
 .services-item {
@@ -407,15 +406,11 @@ footer {
         list-style-type: none;
         justify-content: flex-end;
     }
-}
 
-@media screen and (min-width: 576px) {
     .intro-item {
         font-size: 21px;
     }
-}
 
-@media screen and (min-width: 576px) {
     .work-text-item-container {
         max-width: 30%;
         margin: 60px;
